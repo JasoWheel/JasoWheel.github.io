@@ -1,0 +1,109 @@
+.wholeBody {
+  font-family: "Comic Sans MS", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0px;
+  font-size: 2.2vw;
+}
+
+.scoreNum {font-size: 160%;}
+
+.rBox {font-size:150%; color:green}
+
+.button {font-size: 110%;}
+
+.key {
+  text-align: center;
+  font-size: 140%;
+  border-radius: 20px;
+  background-color: #e8e5e1;
+}
+
+.key:hover {
+  background-color: #00ff00;
+  font-size: 200%;
+}
+
+.button1, #answerButton {
+  background-color: #e3eb57;
+  padding: 10px 10px;
+}
+
+#myText {
+  font-size: 150%;
+  text-align: center;
+}
+
+#gameBox {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto auto auto 75px;
+}
+
+#topRow {
+  grid-column: 1/6;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  position: sticky;
+  top: 0;
+}
+
+#questions, #title, #score {
+  background-color: #edbecd;
+  border: 1px solid black;
+  font-size: 75%;
+}
+
+#question {
+  font-size: 170%;
+}
+
+#actionBox, #keyboard {
+  background-color: #cccccc;
+  border: 1px solid black;
+}
+
+#stats {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  flex-direction: row;
+  grid-column: 1/6;
+  grid-row: 2/3;
+  font-size: 80%;
+  background-color: #000066;
+  border: 1px solid black;
+  color: white;
+}
+
+.sumStats {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+#footer {
+  grid-column: 1/6;
+  font-size: 70%;
+  background-color: #94f07f;
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: 70% auto;
+}
+
+#refresh {
+  grid-row: 2/3;
+}
+
+#actionBox {
+  grid-column: 1/4;
+}
+
+#keyboard {
+  grid-column: 4/6;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: 25% 25% 25% 25%;
+}
