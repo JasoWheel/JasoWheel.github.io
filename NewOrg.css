@@ -91,11 +91,12 @@
   border: 1px solid black;
   display: grid;
   grid-template-rows: 70% auto;
+  align-items:center;
 }
 
-#refresh {
+/*#refresh {
   grid-row: 2/3;
-}
+}*/
 
 #actionBox {
   grid-column: 1/4;
