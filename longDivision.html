@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel = "stylesheet" href = "longDiv.css">
+  <title> Game 12 </title>
+</head>
+
+<body class="WholeBody" id="body">
+
+<div id="Title" > Long Division (Improper Fraction to Mixed Number)
+</div>
+
+<div id="DivisionLand" >
+
+<div id="floatingButton"><button id="nextBtn" class="key3" onclick="nextFocus()">Next Box</button></div>
+<div id="floatingButton2"><button id="backBtn" class="key3" onclick="backFocus()">Back a Box</button></div>
+<div id="floatingButton3"><button id="endBtn" class="key3" onclick="startGame()" >Start</button></div>
+
+<div class="longDivRows" id="row1"><span class="dot1" hidden></span>
+  <span class="longDiv">
+  <input class="numBox" id="r1c1" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled >
+  <input class="numBox" id="r1c2" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r1c3" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+  <input class="numBox" id="r1c4" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+  <input class="numBox" id="r1c5" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()"  onkeyup="enterKey(event)" disabled>
+  <input class="numBox" id="r1c6" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()"  onkeyup="enterKey(event)" disabled>
+  <input class="numBox" id="r1c7" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()"  onkeyup="enterKey(event)" disabled>
+  <input class="numBox" id="r1c8" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()"  onkeyup="enterKey(event)" disabled>
+  <input class="numBox" id="r1c9" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()"  onkeyup="enterKey(event)" disabled>
+  <input class="numBox" id="r1c10" type="text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()"  onkeyup="enterKey(event)" disabled>
+</span></div>
+
+<div class="longDivRows" id="row2"><span class="dot" hidden></span><span class="dot1" hidden></span>
+  <span class="longDiv">
+  <input class="numBox" id="r2c1" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c2" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c3" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c4" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c5" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c6" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c7" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c8" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c9" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+  <input class="numBox" id="r2c10" type="text" inputmode="numeric" name="numBox" maxlength="1" disabled>
+</span></div>
+
+<div class="longDivRowsA" id="row3">
+    <span class="longDiv">
+        <input class="numBox" id="r3c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r3c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r3c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r3c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r3c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r3c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r3c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r3c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r3c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r3c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row4">
+    <span class="longDiv">
+        <input class="numBox" id="r4c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r4c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r4c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r4c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r4c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r4c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r4c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r4c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r4c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r4c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row5">
+    <span class="longDiv">
+        <input class="numBox" id="r5c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r5c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r5c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r5c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r5c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r5c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r5c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r5c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r5c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r5c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row6">
+    <span class="longDiv">
+        <input class="numBox" id="r6c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r6c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r6c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r6c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r6c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r6c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r6c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r6c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r6c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r6c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row7">
+    <span class="longDiv">
+        <input class="numBox" id="r7c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r7c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r7c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r7c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r7c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r7c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r7c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r7c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r7c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r7c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row8">
+    <span class="longDiv">
+        <input class="numBox" id="r8c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r8c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r8c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r8c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r8c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r8c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r8c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r8c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r8c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r8c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row9">
+    <span class="longDiv">
+        <input class="numBox" id="r9c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r9c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r9c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r9c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r9c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r9c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r9c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r9c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r9c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r9c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row10">
+    <span class="longDiv">
+        <input class="numBox" id="r10c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r10c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r10c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r10c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r10c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r10c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r10c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r10c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r10c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r10c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row11">
+    <span class="longDiv">
+        <input class="numBox" id="r11c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r11c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r11c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r11c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r11c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r11c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r11c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r11c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r11c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r11c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row12">
+    <span class="longDiv">
+        <input class="numBox" id="r12c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r12c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r12c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r12c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r12c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r12c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r12c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r12c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r12c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r12c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row13">
+    <span class="longDiv">
+        <input class="numBox" id="r13c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r13c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r13c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r13c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r13c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r13c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r13c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r13c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r13c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r13c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row14">
+    <span class="longDiv">
+        <input class="numBox" id="r14c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r14c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r14c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r14c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r14c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r14c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r14c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r14c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r14c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r14c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row15">
+    <span class="longDiv">
+        <input class="numBox" id="r15c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r15c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r15c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r15c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r15c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r15c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r15c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r15c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r15c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r15c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row16">
+    <span class="longDiv">
+        <input class="numBox" id="r16c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r16c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r16c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r16c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r16c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r16c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r16c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r16c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r16c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r16c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row17">
+    <span class="longDiv">
+        <input class="numBox" id="r17c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r17c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r17c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r17c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r17c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r17c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r17c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r17c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r17c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r17c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+<div class="longDivRowsA" id="row18">
+    <span class="longDiv">
+        <input class="numBox" id="r18c1" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r18c2" type"text" inputmode="numeric" name="numBox" maxlength="1" style="border-color: transparent" disabled>
+        <input class="numBox" id="r18c3" type"text" inputmode="numeric" name="numBox" maxlength="1" style="margin-left:-0.15vw" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r18c4" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r18c5" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r18c6" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r18c7" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r18c8" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r18c9" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+        <input class="numBox" id="r18c10" type"text" inputmode="numeric" name="numBox" maxlength="1" onfocus="findActive()" onkeyup="enterKey(event)" disabled>
+    </span>
+</div>
+</div>
+
+<div id="GameButtons">
+  <div id="numerator">?????</div>
+  <div id="denominator">??</div>
+  <div id="equals"><button id="equals1" style="visibility:visible">=</button></div>
+  <div id="final">
+  <div id="Fwhole">Whole#</div><div id="Fnumer">rem</div><div id="Fdenom">??</div>
+  </div>
+  <div id="enterMe"><button id="enterMe1" style="visibility:visible">Hello!!</button></div>
+  <div id="begin1"><button id="begin" class="key3" onclick="startGame()" autofocus>Click or Spacebar to Start</button></div> <!--this button gets changed as game progresses -->
+</div>
+
+<div id="keysInstructions">
+  <div id="instructions">
+    <div id="instrA">Do division with the fraction above.<br>The answer is the whole number.<br>The remainder is the numerator.</div>
+    <div id="picture"><img src="divExample.jpg" width=99% height=99%></div>
+    <div id="instrB"><p>Step 1: Multiply the top number by the divisor then enter it under remainder. <br><br>Step 2: Subtract to get new remainder.</p></div>
+    <div id="instrC"><p>Green boxes were correct. Pink boxes were not. Enter "0" in spaces that would be blank.</p></div>
+  </div>
+
+  <div id="keyboard">
+    <button class="key" name="keypads" id="btn1" value="1" onclick="input(this);checkFilled()">1</button>
+    <button class="key" name="keypads" id="btn2" value="2" onclick="input(this);checkFilled()" >2</button>
+    <button class="key" name="keypads" id="btn3" value="3" onclick="input(this);checkFilled()" >3</button>
+    <button class="key" name="keypads" id="btn4" value="4" onclick="input(this);checkFilled()" >4</button>
+    <button class="key" name="keypads" id="btn5" value="5" onclick="input(this);checkFilled()" >5</button>
+    <button class="key" name="keypads" id="btn6" value="6" onclick="input(this);checkFilled()" >6</button>
+    <button class="key" name="keypads" id="btn7" value="7" onclick="input(this);checkFilled()" >7</button>
+    <button class="key" name="keypads" id="btn8" value="8" onclick="input(this);checkFilled()" >8</button>
+    <button class="key" name="keypads" id="btn9" value="9" onclick="input(this);checkFilled()" >9</button>
+    <button class="key" name="keypads" id="btnDel" value="<<" onclick="backFocus();checkFilled()" >back</button>
+    <button class="key" name="keypads" id="btnNeg" value="" onclick="input(this);checkFilled()" >next</button>
+    <button class="key" name="keypads" id="btn0" value="0" onclick="input(this);checkFilled()" >0</button>
+  </div>
+</div>
+
+<div id="stats">
+  <div id="leftStats">
+    <span><label for="answered" id="L1">Answered:  </label><label id="answered" class="scoreBox">00</label></span>
+    <span><label for="correct" id="L2">Correct:  </label><label id="correct" class="scoreBox">00</label></span>
+    <span><label for="missed" id="L3">Missed:  </label><label id="missed" class="scoreBox">00</label></span>
+  </div>
+
+  <div id="leftStPct">
+    <span><label for="totalPct" id="Lpct">Total Percentage:<br></label><label id="totalPct" class="scoreBox">n/a</label></span>
+  </div>
+
+  <div id="rightStats">
+  <span><label for="problemNumber" id="R1">Problem #  </label><label id="problemNumber" class="scoreBox">1</label></span>
+  <span><label for="totalProblems" id="R2">Problems Solved:  </label><label id="totalProblems" class="scoreBox">00</label></span>
+  <span><label for="correctProblems" id="R3">Problems Correct:  </label><label id="correctProblems" class="scoreBox">00</label></span>
+  </div>
+
+  <div id="rightStPct">
+    <span><label for="problemPct" id="Rpct">Problem Percentage:<br></label><label id="problemPct" class="scoreBox">n/a</label></span>
+  </div>
+</div>
+
+<div id="bottom">
+    Refresh Page to Restart. == or ==>  <a href="https://jasowheel.github.io">Click Here to Return to Home Page</a>
+</div>
+
+<script type="text/javascript" src="longDiv.js"></script>
+</body>
+</html>
