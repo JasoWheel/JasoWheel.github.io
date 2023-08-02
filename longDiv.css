@@ -19,6 +19,10 @@
     grid-row-gap: 0px;
 }
 
+.WholeBody::-webkit-scrollbar {
+    display: none;
+}
+
 #keysInstructions {
     display: grid; 
     grid-template-columns: 35% 65%; 
@@ -36,12 +40,15 @@
     grid-row: 1/2;
     grid-template-columns: 69% 31%;
     grid-template-rows: 15% 70% 15%;
+    width: 95%;
+    height: 95%;
 }
 
 #picture {
     display: grid;
     grid-column: 1/2;
     grid-row: 2/3;
+    place-items: center;
 }
 
 #instrA {
@@ -67,15 +74,16 @@
     grid-column: 1/3;
     grid-row: 3/4;
     border: 1px solid black;
-    background-color: #77ae8b;
-    place-items: center;
+    /*background-color: #77ae8b;*/
+    place-items: center
+;
 }
 
 #keyboard {
 grid-column: 2/3;
 grid-row: 1 / 2;
-width: 99%;
-height: 99%;
+width: 95%;
+height: 95%;
 display: grid;
 grid-template-columns: 33% 33% 33%;
 grid-auto-rows: 25% 25% 25% 25%;
@@ -87,7 +95,7 @@ grid-auto-rows: 25% 25% 25% 25%;
     grid-row: 4 / 5;
     grid-template-columns: 25% 25% 25% 25%;
     font-size: 1vw;
-    overflow: scroll;
+    /*overflow: scroll;*/
     margin-top: 1%;
 }
 
@@ -95,7 +103,7 @@ grid-auto-rows: 25% 25% 25% 25%;
     display: grid;
     grid-column: 1 / 2;
     border: 2px solid black;
-    overflow: scroll;
+    /*overflow: scroll;*/
     place-items: center;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -105,7 +113,7 @@ grid-auto-rows: 25% 25% 25% 25%;
     display: grid;
     grid-column: 3 / 4;
     border: 2px solid black;
-    overflow: scroll;
+    /*overflow: scroll;*/
     place-items: center;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -116,7 +124,7 @@ grid-auto-rows: 25% 25% 25% 25%;
     grid-column: 2 / 3;
     border: 2px solid black;
     place-items: center;
-    overflow: scroll;
+    /*overflow: scroll;*/
 
 }
 
@@ -125,7 +133,7 @@ grid-auto-rows: 25% 25% 25% 25%;
     grid-column: 4 / 5;
     border: 2px solid black;
     place-items: center;
-    overflow: scroll;
+    /*overflow: scroll;*/
 }
 
 #Title {
