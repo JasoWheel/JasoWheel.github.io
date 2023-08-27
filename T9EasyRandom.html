@@ -564,7 +564,10 @@ function writeStats() {
   document.getElementById("divPrct").innerHTML = divPct;
 }
 //End of Stats Calculation
-
+//disable autocomplete
+let boxForInput = document.getElementById("myText");
+boxForInput.autocomplete = 'off';
+//end disable
 </script>
 
 </body>
